@@ -1,0 +1,135 @@
+@import normalize.css;
+
+/* GLOBALE FONT-INSTILLINGER */
+html {
+  font-size: calc(0.8em + 0.5vw);
+}
+
+/* BORDER-BOX */
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  display: block;
+}
+
+/* FONT-SETTINGS */
+h1 {
+  font-size: 3rem;
+}
+h2 {font-size: 2.2rem;}
+h3 {font-size: 1.8rem;}
+h4 {
+  font-size: 1.2rem;
+}
+p {
+  font-size: 1rem;
+}
+
+/* GRID */
+.index-grid {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-column: repeat(3, 1fr);
+  grid-template-rows: 400px 300px 200px 200px auto;
+  grid-template-areas: "header header header"
+                       "intro intro intro"
+                       "artikler artikler artikler"
+                       "artikler artikler artikler"
+                       "footer footer footer";
+  grid-row-gap: 30px;
+}
+
+#index-header {
+  grid-area: header;
+  background-color: green;
+  text-align: center;
+}
+
+#index-forklaring {
+  grid-area: intro;
+  border: 2px solid black;
+}
+
+#index-artikkellisting {
+  grid-area: artikler;
+}
+
+#index-footer {
+  grid-area: footer;
+  background-color: grey;
+  text-align: center;
+  padding: 0.5rem;
+}
+/* SLUTT PÅ GRID */
+
+/* ARTIKKEL-OPPLISTING-FLEX */
+#index-art-top-row {
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#index-art-bot-row {
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.index-art {
+  height: 100%;
+  text-align: center;
+}
+
+.index-art h5 {
+  padding-top: 3.8rem;
+}
+
+#index-art1 {
+  flex: 1;
+  order: 1;
+  background-image: url("../bilder/installation.jpg");
+  background-size: cover;
+}
+#index-art2 {
+  flex: 1;
+  order: 2;
+  background: black;
+}
+#index-art3 {
+  flex: 1;
+  order: 3;
+  background: green;
+}
+#index-art4 {
+  flex: 1;
+  order: 1;
+  background: purple;
+}
+#index-art5 {
+  flex: 1;
+  order: 2;
+  background: red;
+}
+#index-art6 {
+  flex: 1;
+  order: 3;
+  background: blue;
+}
+/* SLUTT PÅ FLEX-BOKSER */
+
+/* DIVERSE ELEMENTER */
+h5 {
+  z-index: 1;
+
+}
+
+.index-art a {
+  height: 100%;
+  width: 100%;
+}

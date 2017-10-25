@@ -1,0 +1,364 @@
+@charset "UTF-8";
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Dosis|Lato");
+/* GLOBALE FONT-INSTILLINGER */
+html {
+  font-size: calc(0.8em + 0.5vw); }
+
+/* BORDER-BOX */
+body * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  display: block; }
+
+body {
+  background-color: rgba(211, 211, 211, 0.13); }
+
+/* FONT-SETTINGS */
+h1 {
+  font-size: 3rem;
+  font-family: 'Lato', sans-serif; }
+
+h2 {
+  font-size: 2.2rem; }
+
+h3 {
+  font-size: 1.8rem;
+  font-family: 'Lato', sans-serif; }
+
+h4 {
+  font-size: 1.2rem; }
+
+p {
+  font-size: 1rem;
+  font-family: 'Dosis', sans-serif; }
+
+a {
+  font-family: 'Dosis', sans-serif; }
+
+/* GRID */
+.index-grid {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, [col-start] 1fr);
+  grid-template-rows: 400px 170px 570px auto;
+  /*grid-template-areas: "header header header"
+                       "intro intro intro"
+                       "artikler artikler artikler"
+                       "artikler artikler artikler"
+                       "footer footer footer"; */
+  grid-row-gap: 200px; }
+
+.index-header {
+  grid-column: col-start / 9;
+  grid-row: 1;
+  background: url("../bilder/header.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center; }
+
+.index-forklaring {
+  grid-column: col-start / 9;
+  grid-row: 2;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+#index-artikkellisting {
+  grid-column: col-start 3 / span 4;
+  grid-row: 3; }
+
+.index-footer {
+  grid-row: 4;
+  grid-column: col-start / 9;
+  background-color: white;
+  text-align: center;
+  padding: 0.5rem; }
+
+/* SLUTT PÅ GRID */
+/* ARTIKKEL-OPPLISTING-FLEX */
+.index-forklaring-flex {
+  width: 50%;
+  padding: 1rem; }
+
+#index-art-top-row {
+  height: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+#index-art-bot-row {
+  height: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+#index-art1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  background: orange; }
+
+#index-art2 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  background: grey; }
+
+#index-art3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+  background: gold; }
+
+#index-art4 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  background: purple; }
+
+#index-art5 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  background: red; }
+
+#index-art6 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+  background: darkred; }
+
+/* SLUTT PÅ FLEX-BOKSER */
+/* GRID FOR ARTIKKELSIDENE */
+.artikkel-grid {
+  display: grid;
+  margin: 0 auto;
+  width: 100%;
+  grid-template-columns: repeat(16, [col-start] 1fr);
+  grid-template-rows: 400px 60px 100px 500px; }
+
+.index-header {
+  grid-column: col-start / 9;
+  grid-row: 1;
+  background: url("../bilder/header.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  grid-column: col-start / 17; }
+
+.artikkel-nav {
+  grid-column: col-start / 17;
+  grid-row: 2; }
+
+.artikkel-tittel {
+  grid-column: col-start 7/span 4;
+  grid-row: 3; }
+
+main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-column: col-start 4/14;
+  grid-row: 4; }
+
+#artikkel-trinn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  border: 1px solid black;
+  text-align: center; }
+  #artikkel-trinn h5 {
+    padding-top: 0.2rem; }
+  #artikkel-trinn p {
+    padding-top: 0.25rem;
+    font-weight: bolder; }
+
+#artikkel-beskrivelse {
+  -webkit-box-flex: 8;
+  -webkit-flex: 8;
+  -ms-flex: 8;
+  flex: 8;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  border: 1px solid black; }
+  #artikkel-beskrivelse h5 {
+    padding-top: 0.2rem;
+    padding-left: 0.25rem; }
+  #artikkel-beskrivelse p {
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    margin-bottom: 2rem; }
+
+#artikkel-bilde {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+  border: 1px solid black; }
+  #artikkel-bilde h5 {
+    padding-top: 0.2rem; }
+
+.index-footer {
+  grid-row: 4;
+  grid-column: col-start / 9;
+  background-color: white;
+  text-align: center;
+  padding: 0.5rem;
+  grid-row: 5;
+  grid-column: col-start / 17; }
+
+ol {
+  padding: 0; }
+  ol li {
+    margin-bottom: 2.5rem; }
+
+ul {
+  padding: 0; }
+
+/* DIVERSE ELEMENTER */
+.index-art {
+  height: 100%; }
+  .index-art a, .index-art img {
+    z-index: 0;
+    width: 100%;
+    height: 100%; }
+    .index-art a :hover, .index-art img :hover {
+      opacity: 0.75; }
+  .index-art .index-header-box {
+    text-align: center;
+    width: 50%;
+    height: 15%;
+    margin: 25% auto;
+    background: #333;
+    z-index: 999;
+    position: relative;
+    top: -100%; }
+    .index-art .index-header-box a {
+      color: orange;
+      text-decoration: none;
+      z-index: 999;
+      padding: 0.25rem; }
+
+.index-header h1 {
+  position: relative;
+  top: 70%;
+  height: 25%;
+  width: 20%;
+  margin: 0 auto;
+  color: orange;
+  background-color: #333; }
+
+/* ARTIKKEL-INNHOLD */
+.artikkel-nav {
+  text-align: center;
+  padding: 0.5rem; }
+  .artikkel-nav ul {
+    padding: 0; }
+    .artikkel-nav ul li, .artikkel-nav ul a {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+      text-decoration: none;
+      color: black; }
+      .artikkel-nav ul li :hover, .artikkel-nav ul a :hover {
+        color: blue; }
+
+/* For å få hjemmeikonet sentrert på navbaren */
+#forste-element-i-liste, #forst {
+  margin-left: 0; }
+
+img {
+  width: 100%;
+  height: 20%; }
+
+tr:nth-child(even) {
+  background-color: #dddddd; }

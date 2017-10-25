@@ -1,0 +1,13 @@
+$svart: #333;
+
+.index-header {
+  h1 {
+    position: relative;
+    top: 70%;
+    height: 25%;
+    width: 20%;
+    margin: 0 auto;
+    color: orange;
+    background-color: $svart;
+  }
+}

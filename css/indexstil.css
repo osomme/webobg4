@@ -1,0 +1,22 @@
+.index-art {
+  height: 100%; }
+  .index-art a, .index-art img {
+    z-index: 0;
+    width: 100%;
+    height: 100%; }
+    .index-art a :hover, .index-art img :hover {
+      opacity: 0.75; }
+  .index-art .index-header-box {
+    text-align: center;
+    width: 50%;
+    height: 15%;
+    margin: 25% auto;
+    background: #333;
+    z-index: 999;
+    position: relative;
+    top: -100%; }
+    .index-art .index-header-box a {
+      color: orange;
+      text-decoration: none;
+      z-index: 999;
+      padding: 0.25rem; }

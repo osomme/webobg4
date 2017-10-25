@@ -1,0 +1,5 @@
+/* GRID FOR ARTIKKELSIDENE */
+.artikkel-grid {
+  margin: 0 auto;
+  width: 100%;
+  grid-template-columns: repeat(8, [col-start] 1fr); }

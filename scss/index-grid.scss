@@ -1,0 +1,92 @@
+@import "mixins.scss";
+
+/* GRID */
+.index-grid {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, [col-start] 1fr);
+  grid-template-rows: 400px 170px 570px auto;
+  /*grid-template-areas: "header header header"
+                       "intro intro intro"
+                       "artikler artikler artikler"
+                       "artikler artikler artikler"
+                       "footer footer footer"; */
+  grid-row-gap: 200px;
+}
+
+.index-header {
+  @include index-header;
+}
+
+.index-forklaring {
+  grid-column: col-start / 9;
+  grid-row: 2;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#index-artikkellisting {
+  grid-column: col-start 3 / span 4;
+  grid-row: 3;
+}
+
+.index-footer {
+  @include index-footer;
+}
+/* SLUTT PÅ GRID */
+
+/* ARTIKKEL-OPPLISTING-FLEX */
+.index-forklaring-flex {
+  width: 50%;
+  padding: 1rem;
+}
+
+#index-art-top-row {
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#index-art-bot-row {
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#index-art1 {
+  flex: 1;
+  order: 1;
+  background: orange;
+}
+#index-art2 {
+  flex: 1;
+  order: 2;
+  background: grey;
+}
+#index-art3 {
+  flex: 1;
+  order: 3;
+  background: gold;
+}
+#index-art4 {
+  flex: 1;
+  order: 1;
+  background: purple;
+}
+#index-art5 {
+  flex: 1;
+  order: 2;
+  background: red;
+}
+#index-art6 {
+  flex: 1;
+  order: 3;
+  background: darkred;
+}
+/* SLUTT PÅ FLEX-BOKSER */

@@ -1,0 +1,16 @@
+@mixin index-header {
+  grid-column: col-start / 9;
+  grid-row: 1;
+  background: url("../bilder/header.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+@mixin index-footer {
+  grid-row: 4;
+  grid-column: col-start / 9;
+  background-color: white;
+  text-align: center;
+  padding: 0.5rem;
+}

@@ -1,0 +1,75 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Dosis|Lato');
+@import "mixins.scss";
+
+$bakgrunn: rgba(211, 211, 211, 0.13);
+$svart: #333;
+
+
+
+/* GLOBALE FONT-INSTILLINGER */
+html {
+  font-size: calc(0.8em + 0.5vw);
+}
+
+/* BORDER-BOX */
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  display: block;
+}
+
+body {
+  background-color: $bakgrunn;
+}
+
+/* FONT-SETTINGS */
+h1 {font-size: 3rem; font-family: 'Lato', sans-serif;}
+h2 {font-size: 2.2rem;}
+h3 {font-size: 1.8rem; font-family: 'Lato', sans-serif;}
+h4 {font-size: 1.2rem;}
+p {font-size: 1rem; font-family: 'Dosis', sans-serif;}
+a {font-family: 'Dosis', sans-serif;}
+
+
+@import "index-grid.scss";
+@import "artikkelgrid.scss";
+/* DIVERSE ELEMENTER */
+
+@import "indexstil.scss";
+@import "universalstil.scss";
+
+
+/* ARTIKKEL-INNHOLD */
+.artikkel-nav {
+  text-align: center;
+  padding: 0.5rem;
+
+  ul {
+    padding: 0;
+
+    li, a {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+      :hover {
+        color: blue;
+      }
+    }
+  }
+}
+/* For å få hjemmeikonet sentrert på navbaren */
+#forste-element-i-liste, #forst {
+  margin-left: 0;
+}
+
+img {
+  width: 100%;
+  height: 20%;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
