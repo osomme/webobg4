@@ -6,7 +6,7 @@
   margin: 0 auto;
   width: 100%;
   grid-template-columns: repeat(16, [col-start] 1fr);
-  grid-template-rows: 400px 60px 100px 500px;
+  grid-template-rows: 400px 60px 900px auto;
 }
 
 .index-header {
@@ -19,21 +19,37 @@
   grid-row: 2;
 }
 
-.artikkel-tittel {
-  grid-column: col-start 7/span 4;
-  grid-row: 3;
-}
-
 main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  grid-column: col-start 4/14;
-  grid-row: 4;
+  grid-column: col-start 6/12;
+  grid-row: 3;
+  margin-top: 30px;
 }
 
-#artikkel-trinn {
+#artikkel-steg1 {
+  @include artikkel-steg(1)
+}
+#artikkel-innhold1 {
+  @include artikkel-innhold(2)
+}
+#artikkel-steg2 {
+  @include artikkel-steg(3)
+}
+#artikkel-innhold2 {
+  @include artikkel-innhold(4)
+}
+#artikkel-steg3 {
+  @include artikkel-steg(5)
+}
+#artikkel-innhold3 {
+  @include artikkel-innhold(6)
+}
+
+
+/*#artikkel-trinn {
   flex: 1;
   order: 1;
   border: 1px solid black;
@@ -69,12 +85,13 @@ main {
   h5 {
     padding-top: 0.2rem;
   }
-}
+}*/
 
 .index-footer {
   @include index-footer;
-  grid-row: 5;
+  grid-row: 4;
   grid-column: col-start / 17;
+  margin-top: 50px;
 }
 
 ol {

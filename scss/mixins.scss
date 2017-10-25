@@ -14,3 +14,26 @@
   text-align: center;
   padding: 0.5rem;
 }
+
+@mixin artikkel-steg($rekkefolge) {
+  flex: 1;
+  margin: 0 auto;
+  order: $rekkefolge;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  width: 50%;
+  h4 {
+    padding-top: 6%;
+  }
+}
+
+@mixin artikkel-innhold($rekkefolge) {
+  flex: 1;
+  order: $rekkefolge;
+  background-color: lighten(lightgrey, 50%);
+  p {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+}
