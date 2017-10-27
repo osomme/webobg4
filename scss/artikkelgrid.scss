@@ -6,7 +6,7 @@
   margin: 0 auto;
   width: 100%;
   grid-template-columns: repeat(16, [col-start] 1fr);
-  grid-template-rows: 400px 60px 900px auto;
+  grid-template-rows: 400px 60px 1100px auto;
 }
 
 .index-header {
@@ -29,6 +29,24 @@ main {
   margin-top: 30px;
 }
 
+article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.artikkel-venstre-innhold {
+  flex: 1;
+  order: 1;
+  border-right: 1px solid black;
+}
+
+.artikkel-hoyre-innhold {
+  flex: 1;
+  order: 2;
+}
+
 #artikkel-steg1 {
   @include artikkel-steg(1)
 }
@@ -47,59 +65,16 @@ main {
 #artikkel-innhold3 {
   @include artikkel-innhold(6)
 }
-
-
-/*#artikkel-trinn {
-  flex: 1;
-  order: 1;
-  border: 1px solid black;
-  text-align: center;
-  h5 {
-    padding-top: 0.2rem;
-  }
-  p {
-    padding-top: 0.25rem;
-    font-weight: bolder;
-  }
+#artikkel-steg4 {
+  @include artikkel-steg(7)
 }
-
-#artikkel-beskrivelse {
-  flex: 8;
-  order: 2;
-  border: 1px solid black;
-  h5 {
-    padding-top: 0.2rem;
-    padding-left: 0.25rem;
-  }
-  p {
-    padding-top: 0.25rem;
-    padding-left: 0.25rem;
-    margin-bottom: 2rem;
-  }
+#artikkel-innhold4 {
+  @include artikkel-innhold(8)
 }
-
-#artikkel-bilde {
-  flex: 1;
-  order: 3;
-  border: 1px solid black;
-  h5 {
-    padding-top: 0.2rem;
-  }
-}*/
 
 .index-footer {
   @include index-footer;
   grid-row: 4;
   grid-column: col-start / 17;
   margin-top: 50px;
-}
-
-ol {
-  padding: 0;
-  li {
-    margin-bottom: 2.5rem;
-  }
-}
-ul {
-  padding: 0;
 }
