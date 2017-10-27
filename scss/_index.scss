@@ -79,6 +79,27 @@ a {font-family: 'Dosis', sans-serif;}
     }
   }
 }
+
+.artikkel-venstre-innhold {
+  p {
+    a {
+      display: inline;
+    }
+  }
+}
+
+#artikkel-innhold5 {
+  #artikkel-artikkel-bilder {
+    a {
+      width: 50%;
+      height: 100%;
+      float: left;
+      img {
+        margin: 0;
+      }
+    }
+  }
+}
 /* For å få hjemmeikonet sentrert på navbaren */
 #forste-element-i-liste, #forst {
   margin-left: 0;

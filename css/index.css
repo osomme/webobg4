@@ -200,7 +200,7 @@ a {
   margin: 0 auto;
   width: 100%;
   grid-template-columns: repeat(16, [col-start] 1fr);
-  grid-template-rows: 400px 60px 1100px auto; }
+  grid-template-rows: 400px 60px auto auto; }
 
 .index-header {
   grid-column: col-start / 9;
@@ -262,8 +262,7 @@ article {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
   -ms-flex-order: 1;
-  order: 1;
-  border-right: 1px solid black; }
+  order: 1; }
 
 .artikkel-hoyre-innhold {
   -webkit-box-flex: 1;
@@ -273,7 +272,8 @@ article {
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
   -ms-flex-order: 2;
-  order: 2; }
+  order: 2;
+  border-left: 1px solid black; }
 
 #artikkel-steg1 {
   -webkit-box-flex: 0.5;
@@ -290,8 +290,6 @@ article {
   color: white;
   text-align: center;
   width: 50%; }
-  #artikkel-steg1 h4 {
-    margin-top: 4%; }
 
 #artikkel-innhold1 {
   -webkit-box-flex: 1;
@@ -322,8 +320,6 @@ article {
   color: white;
   text-align: center;
   width: 50%; }
-  #artikkel-steg2 h4 {
-    margin-top: 4%; }
 
 #artikkel-innhold2 {
   -webkit-box-flex: 1;
@@ -354,8 +350,6 @@ article {
   color: white;
   text-align: center;
   width: 50%; }
-  #artikkel-steg3 h4 {
-    margin-top: 4%; }
 
 #artikkel-innhold3 {
   -webkit-box-flex: 1;
@@ -386,8 +380,6 @@ article {
   color: white;
   text-align: center;
   width: 50%; }
-  #artikkel-steg4 h4 {
-    margin-top: 4%; }
 
 #artikkel-innhold4 {
   -webkit-box-flex: 1;
@@ -400,6 +392,36 @@ article {
   order: 8;
   background-color: white; }
   #artikkel-innhold4 p {
+    font-size: 0.8rem;
+    padding: 1rem; }
+
+#artikkel-steg5 {
+  -webkit-box-flex: 0.5;
+  -webkit-flex: 0.5;
+  -ms-flex: 0.5;
+  flex: 0.5;
+  margin: 0 auto;
+  -webkit-box-ordinal-group: 10;
+  -webkit-order: 9;
+  -ms-flex-order: 9;
+  order: 9;
+  background-color: darkblue;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  width: 50%; }
+
+#artikkel-innhold5 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-ordinal-group: 11;
+  -webkit-order: 10;
+  -ms-flex-order: 10;
+  order: 10;
+  background-color: white; }
+  #artikkel-innhold5 p {
     font-size: 0.8rem;
     padding: 1rem; }
 
@@ -473,6 +495,16 @@ article {
 
 .artikkel-hoyre-innhold div p a {
   display: inline; }
+
+.artikkel-venstre-innhold p a {
+  display: inline; }
+
+#artikkel-innhold5 #artikkel-artikkel-bilder a {
+  width: 50%;
+  height: 100%;
+  float: left; }
+  #artikkel-innhold5 #artikkel-artikkel-bilder a img {
+    margin: 0; }
 
 /* For å få hjemmeikonet sentrert på navbaren */
 #forste-element-i-liste, #forst {
