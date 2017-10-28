@@ -7,11 +7,6 @@
   display: grid;
   grid-template-columns: repeat(8, [col-start] 1fr);
   grid-template-rows: 400px 170px 570px auto;
-  /*grid-template-areas: "header header header"
-                       "intro intro intro"
-                       "artikler artikler artikler"
-                       "artikler artikler artikler"
-                       "footer footer footer"; */
   grid-row-gap: 200px;
 }
 

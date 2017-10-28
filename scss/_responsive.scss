@@ -1,0 +1,116 @@
+/* MEDIA-QUERIES FOR RESPONSITIVITET */
+@media only screen and (max-width: 800px) {
+  .index-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 170px auto auto;
+    grid-template-areas: "header"
+                         "intro"
+                         "artikler"
+                         "footer";
+    grid-row-gap: 5px;
+  }
+
+  .artikkel-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 220px auto auto;
+    grid-template-areas: "header"
+                         "navbar"
+                         "content"
+                         "footer";
+    grid-row-gap: 5px;
+  }
+
+/* Grid for elementer på hovedsiden(index) */
+  .index-forklaring {
+    grid-area: intro;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  #index-artikkellisting {
+    grid-area: artikler;
+  }
+
+  /* artikkel-opplistning på hovedsiden(index)*/
+  .index-forklaring-flex {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #index-art-top-row {
+    order: 1;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #index-art-bot-row {
+    order: 2;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .index-art {
+    height: 10rem;
+  }
+
+  .index-header {
+    h1 {
+      width: 60%;
+      padding: 1rem;
+    }
+  }
+
+/* Grid for elementer på artikkelsidene */
+  .artikkel-nav {
+    grid-area: navbar;
+    ul {
+      li, a {
+        display: block;
+        font-size: 1.2rem;
+        padding-bottom: 0.35rem;
+      }
+      a:visited {
+        color: red;
+      }
+    }
+  }
+
+  #artikkel-main {
+    grid-area: content;
+    margin: 0;
+    article {
+      flex-direction: column;
+    }
+  }
+
+  .artikkel-hoyre-innhold {
+    border-left: none;
+  }
+
+  .artikkel-venstre-innhold p{
+    font-size: 1.2rem;
+  }
+
+/* Grid for elementer som gjelder for begge typer sider */
+  .index-header {
+    @include index-header;
+    grid-area: header;
+  }
+  .index-footer {
+    @include index-footer;
+    grid-area: footer;
+    margin: 0;
+  }
+  /* SLUTT PÅ GRID */
+}

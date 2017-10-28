@@ -47,7 +47,6 @@ a {font-family: 'Dosis', sans-serif;}
 
   ul {
     padding: 0;
-
     li, a {
       margin-left: 0.5rem;
       margin-right: 0.5rem;
@@ -104,3 +103,27 @@ a {font-family: 'Dosis', sans-serif;}
 #forste-element-i-liste, #forst {
   margin-left: 0;
 }
+
+/* En skjult "skip to content" link for bedre tilgjengelighet */
+/* Denne koden er hentet fra https://www.bignerdranch.com/blog/web-accessibility-skip-navigation-links/ */
+.skip {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    text-align: left;
+    overflow: hidden;
+}
+
+a.skip:active,
+a.skip:focus,
+a.skip:hover {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+@import "responsive.scss";
